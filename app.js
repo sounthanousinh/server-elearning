@@ -15,7 +15,7 @@ App.get('/', (req, res) => {
 
 
 // App.use('/users', require('./api/users'))
-App.use('/users', require('./api/users'));
+// App.use('/users', require('./api/users'));
 
 App.listen(port, () => { console.log("npm run dev is Port:" + port); })
 
