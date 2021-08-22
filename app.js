@@ -6,8 +6,8 @@ App.use(BodyPasser.json());
 App.use(BodyPasser.urlencoded({ extended: true }));
 
 // port form server
-// let port = process.env.port || 8080
-let port = 8080;
+let port = process.env.port || 8080
+// let port = 8080;
 
 App.get('/', (req, res) => {
     return res.send({ error: false, message: "Hello word", name: 'noum' })
@@ -15,7 +15,7 @@ App.get('/', (req, res) => {
 
 
 // App.use('/users', require('./api/users'))
-// App.use('/users', require('./api/users'));
+App.use('/users', require('./api/users'));
 
 App.listen(port, () => { console.log("npm run dev is Port:" + port); })
 
